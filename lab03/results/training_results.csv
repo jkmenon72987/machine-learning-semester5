@@ -1,0 +1,4 @@
+model,epochs,learning_rate,batch_size,training_time_seconds,test_accuracy
+MLP,5,0.001,128,93.6626,0.875
+CNN,5,0.001,128,137.8883,0.8982
+Attention,5,0.001,128,145.4126,0.8371

@@ -1,0 +1,73 @@
+LAB 04 - DATA VALIDATION REPORT
+=============================================
+
+DATASET DIMENSIONS
+Rows: 48842
+Columns: 15
+
+DATA TYPES
+age                  int64
+workclass         category
+fnlwgt               int64
+education         category
+education-num        int64
+marital-status    category
+occupation        category
+relationship      category
+race              category
+sex               category
+capital-gain         int64
+capital-loss         int64
+hours-per-week       int64
+native-country    category
+income            category
+
+ACTUAL MISSING VALUES
+age                  0
+workclass         2799
+fnlwgt               0
+education            0
+education-num        0
+marital-status       0
+occupation        2809
+relationship         0
+race                 0
+sex                  0
+capital-gain         0
+capital-loss         0
+hours-per-week       0
+native-country     857
+income               0
+
+LITERAL QUESTION-MARK INDICATORS
+age               0
+workclass         0
+fnlwgt            0
+education         0
+education-num     0
+marital-status    0
+occupation        0
+relationship      0
+race              0
+sex               0
+capital-gain      0
+capital-loss      0
+hours-per-week    0
+native-country    0
+income            0
+
+NUMERICAL RANGE CHECKS
+age: range [17, 90], violations = 0
+hours-per-week: range [1, 99], violations = 0
+capital-gain: range [0, 99999], violations = 0
+capital-loss: range [0, 4356], violations = 0
+
+VALIDATION VIOLATIONS
+No schema, type, range, or target violations.
+
+DATA-QUALITY WARNINGS
+- workclass: 2799 NaN values and 0 literal '?' indicators.
+- occupation: 2809 NaN values and 0 literal '?' indicators.
+- native-country: 857 NaN values and 0 literal '?' indicators.
+
+No rows were removed or modified during validation.

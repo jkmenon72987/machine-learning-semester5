@@ -1,0 +1,4 @@
+Dataset: Adult (OpenML version 2)
+Algorithm: SHA256
+Method: SHA256 of canonical CSV containing all features and income target
+Hash: 88bb78216c6bac623cefa70797ad1177303c21f69558006dad76cbab6071116c

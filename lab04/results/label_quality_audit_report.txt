@@ -1,0 +1,24 @@
+LAB 04 - TASK 6: LABEL-QUALITY AUDIT
+==================================================
+Dataset rows: 48842
+Original input features: 14
+
+PART A: RANDOM SAMPLE
+Sample size: 50
+Random seed: 42
+Sample CSV: label_audit_sample_50.csv
+
+Missing values in the sample:
+workclass: 2
+occupation: 2
+native-country: 1
+
+PART B: CONFLICTING LABELS
+Conflicting feature groups: 5
+Records in conflicting groups: 10
+Conflict-group CSV: conflicting_label_groups.csv
+Conflict-record CSV: conflicting_label_records.csv
+
+MANUAL REVIEW REQUIRED
+Inspect label_audit_sample_50.csv against the dataset documentation. Record suspicious or inconsistent values only when supported by the data dictionary.
+Conflicting feature groups are records with identical original feature values but different income labels. A conflict does not automatically prove a label is wrong.

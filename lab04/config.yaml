@@ -1,0 +1,72 @@
+
+project:
+  name: "Machine Learning Lab 4"
+  description: "Data pipeline and data quality analysis"
+
+dataset:
+  name: "Adult"
+  source: "OpenML"
+  version: 2
+  target_column: "income"
+  expected_rows: 48842
+  expected_input_features: 14
+
+reproducibility:
+  random_seed: 42
+  hash_algorithm: "SHA256"
+  hash_file: "results/dataset_hash.txt"
+
+splitting:
+  strategy: "stratified"
+  test_size: 0.30
+
+preprocessing:
+  numeric_imputation: "median"
+  categorical_imputation: "most_frequent"
+  outlier_clipping:
+    lower_percentile: 1
+    upper_percentile: 99
+  numerical_scaling: "StandardScaler"
+  categorical_encoding: "OneHotEncoder"
+  unknown_categories: "ignore"
+  remove_training_duplicates: true
+
+feature_engineering:
+  enabled: true
+  derived_features:
+    - name: "capital_net"
+      formula: "capital-gain - capital-loss"
+    - name: "hours_per_age"
+      formula: "hours-per-week / (age - 16)"
+    - name: "age_group"
+      source: "age"
+      bins: [25, 45, 65]
+      labels:
+        - "25_or_younger"
+        - "26_to_45"
+        - "46_to_65"
+        - "over_65"
+
+model:
+  algorithm: "LogisticRegression"
+  max_iter: 1000
+  positive_label: ">50K"
+  metrics:
+    - "accuracy"
+    - "f1"
+
+artifacts:
+  ingestion_report: "results/ingestion_report.txt"
+  validation_report: "results/validation_report.txt"
+  preprocessing_report: "results/preprocessing_report.txt"
+  feature_audit_report: "results/feature_audit_report.json"
+  engineered_features: "results/engineered_features.csv"
+  model_comparison: "results/model_comparison.csv"
+  label_quality_report: "results/label_quality_audit_report.txt"
+  label_sample: "results/label_audit_sample_50.csv"
+  conflicting_label_groups: "results/conflicting_label_groups.csv"
+  conflicting_label_records: "results/conflicting_label_records.csv"
+  preprocessor: "results/preprocessor.joblib"
+  data_card: "data_card.md"
+  problem_definition: "problem_definition.md"
+

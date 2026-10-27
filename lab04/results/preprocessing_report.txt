@@ -1,0 +1,34 @@
+LAB 04 - PREPROCESSING REPORT
+=============================================
+
+CONFIGURATION
+Random seed: 42
+Test fraction: 0.3
+Split strategy: stratified
+
+DATASET SIZES
+Original rows: 48842
+Training rows before deduplication: 34189
+Test rows: 14653
+Training duplicates removed: 24
+Training rows after deduplication: 34165
+
+PROCESSED SHAPES
+Training: (34165, 105)
+Testing: (14653, 105)
+
+DATA QUALITY CHECKS
+Training values finite: True
+Test values finite: True
+
+PREPROCESSING OPERATIONS
+- Numerical missing values: training median
+- Categorical missing values: training mode
+- Outlier clipping: training 1st and 99th percentiles
+- Numerical scaling: StandardScaler
+- Categorical encoding: OneHotEncoder
+- Duplicate removal: training set only
+- Test data used to fit transformations: No
+
+SAVED ARTIFACT
+Preprocessor: C:\Users\jk\Documents\Semester 5\Machine Learning\lab04\results\preprocessor.joblib

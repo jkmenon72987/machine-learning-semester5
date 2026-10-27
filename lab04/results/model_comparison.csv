@@ -1,0 +1,3 @@
+experiment,accuracy,f1_score,training_rows,test_rows
+Baseline: original features,0.8539548215382515,0.6601016518424396,34165,14653
+With capital_net and hours_per_age,0.8577765645260357,0.6696258719086874,34165,14653

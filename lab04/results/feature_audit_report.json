@@ -1,0 +1,22 @@
+{
+    "dataset": "Adult",
+    "source": "OpenML",
+    "version": 2,
+    "rows": 48842,
+    "columns_including_target": 15,
+    "sha256": "88bb78216c6bac623cefa70797ad1177303c21f69558006dad76cbab6071116c",
+    "label_audit": {
+        "missing_target_labels": 0,
+        "unexpected_target_labels": [],
+        "class_distribution": {
+            "<=50K": 37155,
+            ">50K": 11687
+        }
+    },
+    "feature_engineering": {
+        "new_feature": "age_group",
+        "description": "Age grouped into four ranges: <=25, 26-45, 46-65, and >65.",
+        "feature_count_before": 14,
+        "feature_count_after": 15
+    }
+}

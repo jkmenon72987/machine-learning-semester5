@@ -1,0 +1,9 @@
+LAB 5 - TASK 5 RESULTS
+======================
+Dataset samples: 200
+Epochs: 20
+Runs: 5
+Custom median: 4.384715 seconds
+PyTorch median: 0.013475 seconds
+Custom loss: 0.7003922620091381
+PyTorch loss: 0.6245998740196228

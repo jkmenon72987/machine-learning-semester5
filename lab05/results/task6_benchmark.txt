@@ -1,0 +1,11 @@
+LAB 5 - TASK 6 RESULTS
+======================
+
+PyTorch version: 2.3.1+cpu
+Execution mode: torch.jit.trace
+Eager median: 0.00004765 seconds
+Compiled/traced median: 0.00002560 seconds
+Non-contiguous median: 0.00005240 seconds
+Contiguous median: 0.00005905 seconds
+Non-contiguous stride: (1, 512)
+Contiguous stride: (512, 1)

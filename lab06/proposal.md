@@ -1,68 +1,74 @@
 # Individual Project Proposal
 
-**Project Title:** Lightweight Fashion Image Classification for Edge Devices  
+## Project Title
+**Lightweight SMS Spam Detection for Mobile Devices**
+
 **Student Name:** Jishnu Krishna Menon  
-**Student ID:** 72987  
-**University:** Vistula University  
-**Programme:** Bachelor of Engineering in Artificial Intelligence  
+**Student ID:** 72987
 
-## 1. Problem Statement
+### 1. Problem Definition
 
-Image classification is an important application of artificial intelligence and machine learning. However, deploying deep learning models on edge devices can be challenging because these devices have limited memory, processing power, and computational resources.
+SMS spam messages are commonly used for unwanted advertising, fraudulent offers and phishing attempts. Identifying these messages automatically can help users avoid suspicious communications.
 
-The aim of this project is to develop and optimize a lightweight Convolutional Neural Network (CNN) that can classify clothing images efficiently while maintaining good classification accuracy. The project will focus on reducing model size and inference time so that the model can be suitable for resource-constrained devices.
+The objective of this project is to develop a lightweight machine learning model that classifies SMS messages into two categories: spam and legitimate (ham).
 
-## 2. Dataset
+The main focus is to create a compact and efficient model that can perform predictions locally on devices with limited computing resources.
 
-The project will use the **Fashion-MNIST dataset**, which contains 70,000 grayscale images of clothing items across 10 different classes.
+### 2. Dataset
 
-- Training images: 60,000
-- Test images: 10,000
-- Image resolution: 28 × 28 pixels
-- Number of classes: 10
+The project will use the publicly available **UCI SMS Spam Collection** dataset.
 
-The dataset will be divided into training, validation, and testing sets for model development and evaluation.
+The dataset contains labelled SMS messages classified as spam or ham. It will be divided into training, validation and testing sets using stratified sampling to preserve the class distribution.
 
-## 3. Model and Development Approach
+Text preprocessing and TF-IDF vectorization will be used to convert messages into numerical features suitable for model training.
 
-A Convolutional Neural Network (CNN) will be used as the baseline model. The model will be trained using PyTorch and evaluated using the validation and test datasets.
+### 3. Proposed Model and Methodology
 
-The project will investigate techniques to improve model efficiency while preserving classification performance.
+A lightweight feed-forward neural network will be developed using PyTorch.
 
-## 4. Success Metrics
+The proposed workflow includes:
+- Cleaning and preprocessing SMS text.
+- Converting messages into numerical features using TF-IDF.
+- Training a small neural network for binary classification.
+- Evaluating the original model.
+- Applying dynamic INT8 quantization to reduce model size and potentially improve inference efficiency.
 
-The model will be evaluated using the following criteria:
+The original and optimized models will be compared under the same evaluation conditions.
 
-- **Classification accuracy:** Maintain high accuracy on the Fashion-MNIST test dataset.
-- **Inference latency:** Target no more than 50 milliseconds per prediction.
-- **Model size:** Target a model size of no more than 5 MB.
-- **Efficiency:** Reduce computational requirements without significantly affecting classification accuracy.
+### 4. Success Metrics
 
-## 5. Deployment Constraints
+The project will evaluate the model using:
+- Accuracy
+- Precision
+- Recall
+- F1-score, particularly for the spam class
+- Model size in MB
+- Inference latency in milliseconds
 
-The final model should be suitable for deployment on devices with limited computational resources.
+The aim is to maintain strong spam-detection performance while reducing the model's storage and computational requirements.
 
-The main constraints are:
+### 5. Deployment Constraints
 
-- Maximum inference latency: 50 ms.
-- Maximum model size: 5 MB.
-- Limited memory and processing capacity.
-- Reliable classification performance.
+The intended deployment environment is a resource-constrained device running local inference.
 
-## 6. Planned Optimization Techniques
+The project will use the following targets:
+- Model size: no more than 5 MB.
+- Inference latency: no more than 50 milliseconds per message.
 
-The following optimization techniques will be investigated:
+The measurements will be performed on the available laptop CPU.
 
-1. **Pruning:** Remove less important model weights to reduce the number of parameters.
-2. **Quantization:** Reduce numerical precision to decrease model size and potentially improve inference speed.
-3. **Knowledge Distillation:** Train a smaller student model using the knowledge of a larger teacher model.
+### 6. Planned Optimization Technique
 
-The effectiveness of these techniques will be compared against the original CNN model.
+**Dynamic INT8 Quantization**
 
-## 7. Expected Outcome
+The project will investigate dynamic quantization of the neural network's linear layers. This technique reduces the numerical precision used for model weights and can reduce storage requirements and inference time.
 
-The expected outcome is a compact and efficient image classification model that can classify Fashion-MNIST images while satisfying the specified model-size and latency targets.
+The optimized model will be compared with the original FP32 model to measure changes in accuracy, model size and inference latency.
 
-The project will also provide a comparison of the baseline and optimized models in terms of accuracy, model size, and inference speed.
+### 7. Expected Outcome
 
-**Project Status:** Proposed.
+The expected outcome is a lightweight SMS spam classification model capable of distinguishing unwanted messages from legitimate messages.
+
+The project will provide an experimental comparison between the original and quantized models, demonstrating the trade-off between predictive performance, model size and inference efficiency.
+
+**Project Status:** Proposed – subject to instructor approval.

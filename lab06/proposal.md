@@ -65,4 +65,4 @@ The expected outcome is a compact and efficient image classification model that 
 
 The project will also provide a comparison of the baseline and optimized models in terms of accuracy, model size, and inference speed.
 
-**Project Status:** Proposed – subject to instructor approval.
+**Project Status:** Proposed.

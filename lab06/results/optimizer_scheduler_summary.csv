@@ -1,0 +1,7 @@
+optimizer,scheduler,training_time_seconds,final_validation_accuracy,best_validation_accuracy,best_epoch,final_validation_loss
+Adam,StepLR,377.92,0.8974,0.898,9,0.28885
+Adam,CosineAnnealingLR,375.87,0.9068,0.9068,10,0.26
+Adam,ReduceLROnPlateau,372.02,0.91,0.91,10,0.25211
+SGD,StepLR,367.1,0.849,0.85,7,0.43536
+SGD,CosineAnnealingLR,375.55,0.8624,0.8624,10,0.39444
+SGD,ReduceLROnPlateau,363.32,0.8664,0.8664,10,0.3734

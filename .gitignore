@@ -3,3 +3,8 @@ __pycache__/
 *.pyc
 data/
 .vscode/
+# MLflow local tracking files
+mlflow.db
+mlflow.db-shm
+mlflow.db-wal
+mlruns/

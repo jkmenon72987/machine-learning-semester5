@@ -1,0 +1,6 @@
+batch_size,epochs,training_time_seconds,throughput_samples_per_second,peak_memory_mb,validation_accuracy
+32,5,201.35,1365.79,324.41,0.903
+64,5,182.57,1506.3,330.02,0.9004
+128,5,173.49,1585.11,348.89,0.893
+256,5,174.22,1578.48,378.67,0.891
+512,5,166.86,1648.1,420.07,0.8766

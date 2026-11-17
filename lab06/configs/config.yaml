@@ -1,0 +1,47 @@
+# Lab 06 - Training Pipeline Configuration
+
+experiment:
+  name: "Lab06_FashionMNIST_CNN"
+  run_name: "CNN_Baseline"
+
+reproducibility:
+  seed: 42
+
+dataset:
+  name: "FashionMNIST"
+  root: "data"
+  train_size: 55000
+  validation_size: 5000
+  normalization:
+    mean: 0.2860
+    std: 0.3530
+
+model:
+  name: "CNN"
+  input_channels: 1
+  num_classes: 10
+
+training:
+  epochs: 5
+  batch_size: 128
+  learning_rate: 0.001
+  num_workers: 0
+
+optimizer:
+  name: "Adam"
+  weight_decay: 0.0
+
+scheduler:
+  name: "none"
+
+checkpoint:
+  directory: "lab06/checkpoints"
+  filename: "best_model.pth"
+  save_every_epoch: true
+
+logging:
+  mlflow_tracking_uri: "sqlite:///mlflow.db"
+  log_artifacts: true
+
+device:
+  use_cuda: true

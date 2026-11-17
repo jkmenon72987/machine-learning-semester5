@@ -1,0 +1,11 @@
+experiment,epoch,train_loss,validation_accuracy
+Batch_256,1,0.61592,0.8504
+Batch_256,2,0.38545,0.8666
+Batch_256,3,0.34132,0.8726
+Batch_256,4,0.31387,0.8794
+Batch_256,5,0.29433,0.889
+Batch_64_Accumulation_4,1,0.61594,0.8492
+Batch_64_Accumulation_4,2,0.38548,0.8674
+Batch_64_Accumulation_4,3,0.34123,0.8732
+Batch_64_Accumulation_4,4,0.31391,0.8796
+Batch_64_Accumulation_4,5,0.29424,0.8888

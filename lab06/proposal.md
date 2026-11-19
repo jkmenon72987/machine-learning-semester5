@@ -1,74 +1,78 @@
 # Individual Project Proposal
 
 ## Project Title
-**Lightweight SMS Spam Detection for Mobile Devices**
+**Development of a Lightweight Heart Failure Outcome Prediction Model Using Clinical Parameters**
 
 **Student Name:** Jishnu Krishna Menon  
 **Student ID:** 72987
 
 ### 1. Problem Definition
 
-SMS spam messages are commonly used for unwanted advertising, fraudulent offers and phishing attempts. Identifying these messages automatically can help users avoid suspicious communications.
+Heart failure is a serious cardiovascular condition that requires continuous monitoring and appropriate clinical management. Identifying patterns associated with adverse patient outcomes is an important area of medical research.
 
-The objective of this project is to develop a lightweight machine learning model that classifies SMS messages into two categories: spam and legitimate (ham).
+This project aims to develop a lightweight machine learning model that predicts the occurrence of a recorded mortality event among heart failure patients using routinely collected clinical parameters.
 
-The main focus is to create a compact and efficient model that can perform predictions locally on devices with limited computing resources.
+The primary research objective is to investigate whether a compact neural network can provide useful predictive performance while satisfying strict model-size and inference-latency constraints.
 
 ### 2. Dataset
 
-The project will use the publicly available **UCI SMS Spam Collection** dataset.
+The project will use the publicly available UCI Heart Failure Clinical Records dataset.
 
-The dataset contains labelled SMS messages classified as spam or ham. It will be divided into training, validation and testing sets using stratified sampling to preserve the class distribution.
+The dataset contains 299 patient records and 12 clinical features, including age, ejection fraction, serum creatinine, serum sodium, diabetes, anaemia and other patient characteristics.
 
-Text preprocessing and TF-IDF vectorization will be used to convert messages into numerical features suitable for model training.
+The target variable is `DEATH_EVENT`, representing whether a mortality event was recorded during the follow-up period.
+
+Data preprocessing, feature scaling and stratified sampling will be performed before model training.
 
 ### 3. Proposed Model and Methodology
 
-A lightweight feed-forward neural network will be developed using PyTorch.
+A small feed-forward neural network will be implemented using PyTorch.
 
 The proposed workflow includes:
-- Cleaning and preprocessing SMS text.
-- Converting messages into numerical features using TF-IDF.
-- Training a small neural network for binary classification.
-- Evaluating the original model.
-- Applying dynamic INT8 quantization to reduce model size and potentially improve inference efficiency.
-
-The original and optimized models will be compared under the same evaluation conditions.
+- Clinical dataset exploration and preprocessing.
+- Feature scaling and stratified data splitting.
+- Development and training of a compact neural network.
+- Evaluation using stratified cross-validation.
+- Application of INT8 dynamic quantization.
+- Comparison of the original and optimized models.
 
 ### 4. Success Metrics
 
-The project will evaluate the model using:
-- Accuracy
-- Precision
-- Recall
-- F1-score, particularly for the spam class
-- Model size in MB
-- Inference latency in milliseconds
+Model performance will be evaluated using:
+- Recall (sensitivity).
+- Precision.
+- F1-score.
+- ROC-AUC.
+- Balanced accuracy.
 
-The aim is to maintain strong spam-detection performance while reducing the model's storage and computational requirements.
+Deployment performance will be assessed through:
+- Model size in MB.
+- CPU inference latency in milliseconds.
+
+The objective is to maintain useful predictive performance while satisfying the specified deployment constraints.
 
 ### 5. Deployment Constraints
 
-The intended deployment environment is a resource-constrained device running local inference.
+The intended deployment environment is a resource-constrained CPU-based system.
 
-The project will use the following targets:
+The project will target:
 - Model size: no more than 5 MB.
-- Inference latency: no more than 50 milliseconds per message.
+- Inference latency: no more than 50 milliseconds per prediction.
 
-The measurements will be performed on the available laptop CPU.
+All performance measurements will be conducted on the available laptop CPU.
 
-### 6. Planned Optimization Technique
+### 6. Planned Optimization
 
 **Dynamic INT8 Quantization**
 
-The project will investigate dynamic quantization of the neural network's linear layers. This technique reduces the numerical precision used for model weights and can reduce storage requirements and inference time.
+Dynamic quantization will be investigated as an optimization technique for the neural network's linear layers.
 
-The optimized model will be compared with the original FP32 model to measure changes in accuracy, model size and inference latency.
+The optimized model will be compared with its original FP32 version to evaluate changes in model size, inference latency and predictive performance.
 
 ### 7. Expected Outcome
 
-The expected outcome is a lightweight SMS spam classification model capable of distinguishing unwanted messages from legitimate messages.
+The expected outcome is a compact clinical outcome prediction model that demonstrates the practical trade-offs between predictive performance, model size and inference efficiency.
 
-The project will provide an experimental comparison between the original and quantized models, demonstrating the trade-off between predictive performance, model size and inference efficiency.
+The project will provide an experimental evaluation of model optimization techniques using a publicly available medical dataset.
 
 **Project Status:** Proposed – subject to instructor approval.

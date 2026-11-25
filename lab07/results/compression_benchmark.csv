@@ -1,0 +1,4 @@
+model,storage_mb,latency_ms
+Baseline Dense,3.8763065338134766,1.884937800001353
+95% Pruned Dense,3.8763198852539062,2.499234199989587
+95% Pruned Sparse Representation,1.233872413635254,Not benchmarked

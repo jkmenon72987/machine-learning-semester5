@@ -1,0 +1,29 @@
+[
+    {
+        "model": "Teacher CNN",
+        "parameters": 1015114,
+        "test_loss": 0.2584310062170029,
+        "test_accuracy": 0.906,
+        "model_size_mb": 3.876333236694336,
+        "latency_ms": 1.6641170001821592,
+        "training_time_seconds": null
+    },
+    {
+        "model": "Student Normal",
+        "parameters": 89546,
+        "test_loss": 0.3188713855266571,
+        "test_accuracy": 0.8859,
+        "model_size_mb": 0.34548377990722656,
+        "latency_ms": 0.707624499918893,
+        "training_time_seconds": 162.95285380003043
+    },
+    {
+        "model": "Student Distilled",
+        "parameters": 89546,
+        "test_loss": 0.3271798137187958,
+        "test_accuracy": 0.881,
+        "model_size_mb": 0.3455848693847656,
+        "latency_ms": 0.7054864999372512,
+        "training_time_seconds": 340.1237523999298
+    }
+]

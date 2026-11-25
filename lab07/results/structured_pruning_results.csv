@@ -1,0 +1,4 @@
+method,target_sparsity,actual_filter_sparsity,test_accuracy,accuracy_percent
+structured_l2_filter,0.1,0.09821428571428571,0.9194,91.94
+structured_l2_filter,0.25,0.25,0.9146,91.46
+structured_l2_filter,0.5,0.5,0.9173,91.73

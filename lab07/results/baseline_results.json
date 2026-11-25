@@ -1,0 +1,14 @@
+{
+    "model": "OversizedCNN",
+    "parameters": 1015114,
+    "epochs": 5,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "training_time_seconds": 329.98,
+    "test_loss": 0.2584,
+    "test_accuracy": 0.906,
+    "model_size_bytes": 4064630,
+    "model_size_mb": 3.8763,
+    "inference_latency_ms_per_image": 1.2796,
+    "device": "cpu"
+}
